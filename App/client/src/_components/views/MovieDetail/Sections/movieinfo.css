@@ -1,0 +1,26 @@
+.ant-descriptions-title {
+  padding: 10px 20px;
+  font-size: 26px;
+}
+
+/* Movie Detail */
+/* .FavoriteBtn-container {
+  width: 85%;
+  margin: 1rem auto;
+} */
+
+.FavoriteBtn-Box,
+.FavoriteNumber {
+  width: 85%;
+  margin: 1rem auto;
+}
+
+.FavoriteBtn-container .FavoriteBtn-Box,
+.FavoriteNumber {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.notGoodBtn {
+  border: 1px solid gray;
+}

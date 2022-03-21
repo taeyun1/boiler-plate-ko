@@ -1,0 +1,18 @@
+.LandingPage {
+  width: 100%;
+  margin: 0;
+}
+
+.Movies_latest {
+  width: 85%;
+  margin: 1rem auto;
+}
+
+.loadBtn {
+  display: flex;
+  justify-content: center;
+}
+
+.Load-Btn {
+  margin-bottom: 20px;
+}

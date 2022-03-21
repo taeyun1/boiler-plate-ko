@@ -1,0 +1,23 @@
+/* GridCards */
+
+.GridCards {
+  text-align: center;
+
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+/* Row */
+.ant-row {
+  justify-content: center;
+}
+
+/* 1줄 넘어갈때 ...표시 */
+.Grid-Meta .ant-card-meta-description {
+  /* background: pink; */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

@@ -1,0 +1,61 @@
+.NavBar {
+  /* position: fixed;
+  top: 0px; */
+
+  width: 100%;
+
+  padding: 0 20px;
+  border-bottom: 1px solid #e8e8e8;
+  overflow: auto;
+  box-shadow: 0 0 30px #f3f1f1;
+  background-color: white;
+
+  align-items: center;
+}
+
+.NavBar .Nav__logo {
+  width: 150px;
+  float: left;
+}
+
+.NavBar .Nav__logo span {
+  display: inline-block;
+  font-size: 20px;
+  padding: 19px 20px;
+
+  cursor: pointer;
+  color: #008cba;
+}
+
+.NavBar .menu__container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.NavBar .menu_rigth__container {
+  display: flex;
+}
+
+.NavBar .menu_rigth button,
+.NavBar .menu_left button {
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+
+  padding-bottom: 23px;
+
+  border-bottom: 3px solid transparent;
+
+  background-color: white;
+}
+
+.NavBar .menu_rigth button:hover,
+.NavBar .menu_left button:hover {
+  color: #008cba;
+  border-bottom: 3px solid #008cba;
+}
+
+.NavBar .signInBtn {
+  margin-right: 20px;
+}
