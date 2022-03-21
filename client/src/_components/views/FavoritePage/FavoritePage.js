@@ -5,10 +5,22 @@ import { Button, Popover } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import { IMAGE_BASE_URL } from "../../../Config";
 
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 function FavoritePage() {
+  let navigate = useNavigate();
+  const user = useSelector((state) => state.user);
+
   const [Favorites, setFavorites] = useState([]);
 
   useEffect(() => {
+    // 유저가 로그인을 안했으면?
+    if (user.userData && !user.userData.isAuth) {
+      alert("로그인이 필요합니다.");
+      navigate("/login");
+    }
+
     fetchFavoredMovie();
   }, []);
 

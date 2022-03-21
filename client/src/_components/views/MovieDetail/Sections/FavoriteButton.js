@@ -2,8 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Button } from "antd";
 import axios from "axios";
 import { DislikeOutlined, LikeOutlined } from "@ant-design/icons";
-
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 function FavoriteButton(props) {
+  let navigate = useNavigate();
+  const user = useSelector((state) => state.user);
+
   // 얼마나 많은 사람들이 이 영화를 Favorite 리스트에 넣었는지
   // 숫자 정보 얻기
 
@@ -51,6 +55,12 @@ function FavoriteButton(props) {
 
   // Favorite 버튼 눌렀을때 처리
   const onFavorite = () => {
+    // 유저가 로그인을 안했으면?
+    if (user.userData && !user.userData.isAuth) {
+      alert("로그인이 필요합니다.");
+      navigate("/login");
+    }
+
     // Favorited이 true면, 1개 이상 추가 했으면?
     if (Favorited) {
       axios

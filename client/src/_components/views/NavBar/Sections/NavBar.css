@@ -3,6 +3,7 @@
   top: 0px; */
 
   width: 100%;
+  max-height: 71px;
 
   padding: 0 20px;
   border-bottom: 1px solid #e8e8e8;
@@ -15,7 +16,14 @@
 
 .NavBar .Nav__logo {
   width: 150px;
+  height: 100%;
   float: left;
+}
+
+.Nav__logo img {
+  width: 135px;
+  height: 71px;
+  cursor: pointer;
 }
 
 .NavBar .Nav__logo span {

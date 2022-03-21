@@ -1,6 +1,3 @@
-/App/server/config/dev.js
-/react-john/node_modules
-/react-john/package-lock.json
-/App/client/node_modules
-/App/client/package-lock.json
+dev.js
+
 node_modules

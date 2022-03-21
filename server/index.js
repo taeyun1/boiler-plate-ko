@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const { User } = require("./models/User");
 const { auth } = require("./middleware/auth");
-const config = require("./server/config/key");
+const config = require("./config/key");
 // 2021이후 body-parser 설치 안해도됨(아래코드 작성)
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
@@ -15,6 +15,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 const mongoose = require("mongoose");
+const { path } = require("express/lib/application");
 mongoose
   .connect(config.mongoURI)
   .then(() => console.log("MongoDB Connected..."))
@@ -109,7 +110,16 @@ app.get("/api/users/logout", auth, (req, res) => {
 });
 
 // router를 이용해 코드를 나눔
-app.use("/api/favorite", require("./server/routes/favorite"));
+app.use("/api/favorite", require("./routes/favorite"));
+
+// 헤로쿠 배포시 설정
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "../client", "build", "index.html"));
+  });
+}
 
 const port = process.env.PORT || 5000;
 

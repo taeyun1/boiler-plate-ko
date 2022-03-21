@@ -27,7 +27,10 @@ function NavBar() {
   return (
     <nav className="NavBar">
       <div className="Nav__logo">
-        <span onClick={() => navigate("/")}>Home</span>
+        <img
+          src="https://image.freepik.com/free-vector/click-movie-logo-vector_18099-258.jpg"
+          onClick={() => navigate("/")}
+        />
       </div>
 
       {/* 메뉴 컨테이너 */}
@@ -36,6 +39,7 @@ function NavBar() {
           <button onClick={() => navigate("/favorite")}>Favorite</button>
         </div>
 
+        {/* 유저가 로그인을 안 했으면? */}
         {user.userData && !user.userData.isAuth ? (
           <div className="menu_rigth__container">
             <div className="menu_rigth menu_signIn">
