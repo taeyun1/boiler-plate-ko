@@ -28,7 +28,7 @@ function NavBar() {
     <nav className="NavBar">
       <div className="Nav__logo">
         <img
-          src="https://image.freepik.com/free-vector/click-movie-logo-vector_18099-258.jpg"
+          src="https://static.vecteezy.com/system/resources/previews/000/648/594/original/retro-movie-logo-vector.jpg"
           onClick={() => navigate("/")}
         />
       </div>
